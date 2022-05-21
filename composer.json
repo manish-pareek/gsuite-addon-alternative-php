@@ -1,40 +1,39 @@
 {
-    "name": "shailesh-matariya/gsuite-addon-php",
+    "name": "manish-pareek/gsuite-addon-php",
     "description": "For the gsuite addon card services alternatives",
     "keywords": [
-        "shailesh-matariya",
+        "manish-pareek",
         "gsuite-addon-alternative-php"
     ],
-    "homepage": "https://github.com/shailesh-matariya/gsuite-addon-alternative-php",
+    "homepage": "https://github.com/manish-pareek/gsuite-addon-alternative-php",
     "license": "MIT",
     "type": "library",
     "authors": [
         {
-            "name": "Shailesh Matariya",
-            "email": "patel.shailesh987@gmail.com",
+            "name": "Manish Pareek",
+            "email": "pareek.manish558@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^7.0"
+        "php": "^7.0|^8.0"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.0"
+        "phpunit/phpunit": "^6|^7|^8|^9"
     },
     "autoload": {
         "psr-4": {
-            "ShaileshMatariya\\Gsuite\\Addon\\": "src"
+            "ManishPareek\\Gsuite\\Addon\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "ShaileshMatariya\\Gsuite\\Addon\\Tests\\": "tests"
+            "ManishPareek\\Gsuite\\Addon\\Tests\\": "tests"
         }
     },
     "scripts": {
         "test": "vendor/bin/phpunit",
         "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
-
     },
     "config": {
         "sort-packages": true

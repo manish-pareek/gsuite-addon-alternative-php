@@ -1,6 +1,6 @@
 <?php
 
-namespace ShaileshMatariya\GsuiteAddonAlternativePhp\Tests;
+namespace ManishPareek\GsuiteAddonAlternativePhp\Tests;
 
 use PHPUnit\Framework\TestCase;
 

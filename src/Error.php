@@ -1,6 +1,6 @@
 <?php
 
-namespace ShaileshMatariya\Gsuite\Addon;
+namespace ManishPareek\Gsuite\Addon;
 
 class Error extends GoogleModel
 {

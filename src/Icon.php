@@ -1,6 +1,6 @@
 <?php
 
-namespace ShaileshMatariya\Gsuite\Addon;
+namespace ManishPareek\Gsuite\Addon;
 
 /** @link  https://developers.google.com/apps-script/reference/card-service/icon */
 class Icon extends GoogleModel

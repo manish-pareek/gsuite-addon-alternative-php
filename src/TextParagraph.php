@@ -1,6 +1,6 @@
 <?php
 
-namespace ShaileshMatariya\Gsuite\Addon;
+namespace ManishPareek\Gsuite\Addon;
 
 /** @id /properties/text_paragraph */
 class TextParagraph extends GoogleModel
