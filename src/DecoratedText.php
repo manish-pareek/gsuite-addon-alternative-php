@@ -13,6 +13,9 @@ class DecoratedText extends GoogleModel
     /** @var Icon */
     public $icon;
 
+    public $setEndIcon;
+
+
     /** @var string */
     public $image_type;
 
@@ -30,6 +33,7 @@ class DecoratedText extends GoogleModel
 
     /** @var OnClick */
     public $on_click;
+
 
     /**
      * @return string
@@ -79,6 +83,7 @@ class DecoratedText extends GoogleModel
         return $this->icon;
     }
 
+
     /**
      * @param Icon $icon
      *
@@ -90,6 +95,20 @@ class DecoratedText extends GoogleModel
 
         return $this;
     }
+
+    /**
+     * @param Icon $icon
+     *
+     * @return DecoratedText
+     */
+    public function setEndIcon(Icon $icon): self
+    {
+        $this->endIcon = $icon;
+
+        return $this;
+    }
+
+
 
     /**
      * @return bool

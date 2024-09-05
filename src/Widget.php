@@ -2,8 +2,7 @@
 
 namespace ManishPareek\Gsuite\Addon;
 
-class Widget extends GoogleModel
-{
+class Widget extends GoogleModel {
     /** @var Image */
     public $image;
 
@@ -28,11 +27,13 @@ class Widget extends GoogleModel
     /** @var string "enum": [ "START", "CENTER", "END" ] */
     public $horizontal_alignment;
 
+    /** @var Columns */
+    public $columns;
+
     /**
      * @return Image
      */
-    public function getImage(): Image
-    {
+    public function getImage(): Image {
         return $this->image;
     }
 
@@ -41,8 +42,7 @@ class Widget extends GoogleModel
      *
      * @return Widget
      */
-    public function setImage(Image $image): self
-    {
+    public function setImage(Image $image): self {
         $this->image = $image;
 
         return $this;
@@ -53,8 +53,7 @@ class Widget extends GoogleModel
      *
      * @return Widget
      */
-    public function setTextParagraph(TextParagraph $text_paragraph): self
-    {
+    public function setTextParagraph(TextParagraph $text_paragraph): self {
         $this->text_paragraph = $text_paragraph;
 
         return $this;
@@ -63,8 +62,7 @@ class Widget extends GoogleModel
     /**
      * @return DecoratedText
      */
-    public function getDecoratedText(): DecoratedText
-    {
+    public function getDecoratedText(): DecoratedText {
         return $this->decorated_text;
     }
 
@@ -73,8 +71,7 @@ class Widget extends GoogleModel
      *
      * @return Widget
      */
-    public function setDecoratedText(DecoratedText $decorated_text): self
-    {
+    public function setDecoratedText(DecoratedText $decorated_text): self {
         $this->decorated_text = $decorated_text;
 
         return $this;
@@ -83,8 +80,7 @@ class Widget extends GoogleModel
     /**
      * @return ButtonList
      */
-    public function getButtonList(): ButtonList
-    {
+    public function getButtonList(): ButtonList {
         return $this->button_list;
     }
 
@@ -93,8 +89,7 @@ class Widget extends GoogleModel
      *
      * @return Widget
      */
-    public function setButtonList(ButtonList $button_list): self
-    {
+    public function setButtonList(ButtonList $button_list): self {
         $this->button_list = $button_list;
 
         return $this;
@@ -103,8 +98,7 @@ class Widget extends GoogleModel
     /**
      * @return TextInput
      */
-    public function getTextInput(): TextInput
-    {
+    public function getTextInput(): TextInput {
         return $this->text_input;
     }
 
@@ -113,8 +107,7 @@ class Widget extends GoogleModel
      *
      * @return Widget
      */
-    public function setTextInput(TextInput $text_input): self
-    {
+    public function setTextInput(TextInput $text_input): self {
         $this->text_input = $text_input;
 
         return $this;
@@ -123,8 +116,7 @@ class Widget extends GoogleModel
     /**
      * @return SelectionInput
      */
-    public function getSelectionInput(): SelectionInput
-    {
+    public function getSelectionInput(): SelectionInput {
         return $this->selection_input;
     }
 
@@ -133,8 +125,7 @@ class Widget extends GoogleModel
      *
      * @return Widget
      */
-    public function setSelectionInput(SelectionInput $selection_input): self
-    {
+    public function setSelectionInput(SelectionInput $selection_input): self {
         $this->selection_input = $selection_input;
 
         return $this;
@@ -143,8 +134,7 @@ class Widget extends GoogleModel
     /**
      * @return DateTimePicker
      */
-    public function getDateTimePicker(): DateTimePicker
-    {
+    public function getDateTimePicker(): DateTimePicker {
         return $this->date_time_picker;
     }
 
@@ -153,8 +143,7 @@ class Widget extends GoogleModel
      *
      * @return Widget
      */
-    public function setDateTimePicker(DateTimePicker $date_time_picker): self
-    {
+    public function setDateTimePicker(DateTimePicker $date_time_picker): self {
         $this->date_time_picker = $date_time_picker;
 
         return $this;
@@ -163,8 +152,7 @@ class Widget extends GoogleModel
     /**
      * @return string
      */
-    public function getHorizontalAlignment(): string
-    {
+    public function getHorizontalAlignment(): string {
         return $this->horizontal_alignment;
     }
 
@@ -173,9 +161,20 @@ class Widget extends GoogleModel
      *
      * @return Widget
      */
-    public function setHorizontalAlignment(string $horizontal_alignment): self
-    {
+    public function setHorizontalAlignment(string $horizontal_alignment): self {
         $this->horizontal_alignment = $horizontal_alignment;
+
+        return $this;
+    }
+
+
+    /**
+     * @param Columns $columns
+     *
+     * @return Widget
+     */
+    public function setColumns(Columns $columns): self {
+        $this->columns = $columns;
 
         return $this;
     }

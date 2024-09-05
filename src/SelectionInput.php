@@ -2,8 +2,7 @@
 
 namespace ManishPareek\Gsuite\Addon;
 
-class SelectionInput extends GoogleModel
-{
+class SelectionInput extends GoogleModel {
     /** @var string */
     public $name;
 
@@ -16,14 +15,15 @@ class SelectionInput extends GoogleModel
     /** @var SelectionItem[] */
     public $items;
 
+    public $multi_select_items;
+
     /** @var Action */
     public $on_change_action;
 
     /**
      * @return string
      */
-    public function getName(): string
-    {
+    public function getName(): string {
         return $this->name;
     }
 
@@ -32,8 +32,7 @@ class SelectionInput extends GoogleModel
      *
      * @return SelectionInput
      */
-    public function setName(string $name): self
-    {
+    public function setName(string $name): self {
         $this->name = $name;
 
         return $this;
@@ -42,8 +41,7 @@ class SelectionInput extends GoogleModel
     /**
      * @return string
      */
-    public function getLabel(): string
-    {
+    public function getLabel(): string {
         return $this->label;
     }
 
@@ -52,8 +50,7 @@ class SelectionInput extends GoogleModel
      *
      * @return SelectionInput
      */
-    public function setLabel(string $label): self
-    {
+    public function setLabel(string $label): self {
         $this->label = $label;
 
         return $this;
@@ -62,8 +59,7 @@ class SelectionInput extends GoogleModel
     /**
      * @return string
      */
-    public function getType(): string
-    {
+    public function getType(): string {
         return $this->type;
     }
 
@@ -72,8 +68,7 @@ class SelectionInput extends GoogleModel
      *
      * @return SelectionInput
      */
-    public function setType(string $type): self
-    {
+    public function setType(string $type): self {
         $this->type = $type;
 
         return $this;
@@ -82,8 +77,7 @@ class SelectionInput extends GoogleModel
     /**
      * @return SelectionItem[]
      */
-    public function getItems(): array
-    {
+    public function getItems(): array {
         return $this->items;
     }
 
@@ -92,18 +86,24 @@ class SelectionInput extends GoogleModel
      *
      * @return SelectionInput
      */
-    public function setItems(array $items): self
-    {
+    public function setItems(array $items): self {
         $this->items = $items;
 
         return $this;
     }
 
+
+    public function setMultipleSelectItems(array $items): self {
+        $this->multi_select_items = $items;
+
+        return $this;
+    }
+
+
     /**
      * @return Action
      */
-    public function getOnChangeAction(): Action
-    {
+    public function getOnChangeAction(): Action {
         return $this->on_change_action;
     }
 
@@ -112,8 +112,7 @@ class SelectionInput extends GoogleModel
      *
      * @return SelectionInput
      */
-    public function setOnChangeAction(Action $on_change_action): self
-    {
+    public function setOnChangeAction(Action $on_change_action): self {
         $this->on_change_action = $on_change_action;
 
         return $this;
