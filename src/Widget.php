@@ -30,6 +30,9 @@ class Widget extends GoogleModel {
     /** @var Columns */
     public $columns;
 
+    /** @var Grid */
+    public $grid;
+
     /**
      * @return Image
      */
@@ -175,6 +178,12 @@ class Widget extends GoogleModel {
      */
     public function setColumns(Columns $columns): self {
         $this->columns = $columns;
+
+        return $this;
+    }
+
+    public function setGrid(Grid $grid): self {
+        $this->grid = $grid;
 
         return $this;
     }

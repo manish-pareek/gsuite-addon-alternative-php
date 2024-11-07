@@ -10,7 +10,7 @@ class GridItem extends GoogleModel {
     public $title;
 
     /** @var Subtitle */
-    public Subtitle;
+    public $subtitle;
 
     /** @var string */
     public $image_type;
@@ -30,6 +30,10 @@ class GridItem extends GoogleModel {
     /** @var OnClick */
     public $on_click;
 
+    /** @var SelectionInput */
+    public $selection_input;
+
+
     /**
      * @return string
      */
@@ -45,10 +49,7 @@ class GridItem extends GoogleModel {
     }
 
 
-    /**
-     * @param Title $title
-     */
-    public function setTitle(Title $title): self {
+    public function setTitle($title): self {
         $this->title = $title;
 
         return $this;
@@ -60,8 +61,8 @@ class GridItem extends GoogleModel {
      *
      * @return DecoratedText
      */
-    public function setSubtitle(Subtitle Subtitle): self {
-        $this->icon = Subtitle;
+    public function setSubtitle(Subtitle $Subtitle): self {
+        $this->icon = $Subtitle;
 
         return $this;
     }
@@ -88,4 +89,17 @@ class GridItem extends GoogleModel {
 
         return $this;
     }
+
+    /**
+     * @param SelectionInput $selection_input
+     *
+     * @return Widget
+     */
+    public function setSelectionInput(SelectionInput $selection_input): self {
+        $this->selection_input = $selection_input;
+
+        return $this;
+    }
+
+    
 }

@@ -2,7 +2,8 @@
 
 namespace ManishPareek\Gsuite\Addon;
 
-class Button extends GoogleModel {
+class TextButton extends GoogleModel
+{
     /** @var string */
     public $text;
 
@@ -18,13 +19,11 @@ class Button extends GoogleModel {
     /** @var bool */
     public $disabled;
 
-    /** @var string */
-    public $type;
-
     /**
      * @return string
      */
-    public function getText(): string {
+    public function getText(): string
+    {
         return $this->text;
     }
 
@@ -33,7 +32,8 @@ class Button extends GoogleModel {
      *
      * @return Button
      */
-    public function setText(string $text): self {
+    public function setText(string $text): self
+    {
         $this->text = $text;
 
         return $this;
@@ -42,7 +42,8 @@ class Button extends GoogleModel {
     /**
      * @return Icon
      */
-    public function getIcon(): Icon {
+    public function getIcon(): Icon
+    {
         return $this->icon;
     }
 
@@ -51,7 +52,8 @@ class Button extends GoogleModel {
      *
      * @return Button
      */
-    public function setIcon(Icon $icon): self {
+    public function setIcon(Icon $icon): self
+    {
         $this->icon = $icon;
 
         return $this;
@@ -60,7 +62,8 @@ class Button extends GoogleModel {
     /**
      * @return Color
      */
-    public function getColor(): Color {
+    public function getColor(): Color
+    {
         return $this->color;
     }
 
@@ -69,7 +72,8 @@ class Button extends GoogleModel {
      *
      * @return Button
      */
-    public function setColor(Color $color): self {
+    public function setColor(Color $color): self
+    {
         $this->color = $color;
 
         return $this;
@@ -78,7 +82,8 @@ class Button extends GoogleModel {
     /**
      * @return OnClick
      */
-    public function getOnClick(): OnClick {
+    public function getOnClick(): OnClick
+    {
         return $this->on_click;
     }
 
@@ -87,7 +92,8 @@ class Button extends GoogleModel {
      *
      * @return Button
      */
-    public function setOnClick(OnClick $on_click): self {
+    public function setOnClick(OnClick $on_click): self
+    {
         $this->on_click = $on_click;
 
         return $this;
@@ -96,7 +102,8 @@ class Button extends GoogleModel {
     /**
      * @return bool
      */
-    public function isDisabled(): bool {
+    public function isDisabled(): bool
+    {
         return $this->disabled;
     }
 
@@ -105,14 +112,9 @@ class Button extends GoogleModel {
      *
      * @return Button
      */
-    public function setDisabled(bool $disabled): self {
+    public function setDisabled(bool $disabled): self
+    {
         $this->disabled = $disabled;
-
-        return $this;
-    }
-
-    public function setType(string $type): self {
-        $this->type = $type;
 
         return $this;
     }

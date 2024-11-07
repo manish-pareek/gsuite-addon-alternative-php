@@ -4,20 +4,20 @@ namespace ManishPareek\Gsuite\Addon;
 
 class Grid extends GoogleModel {
 
-    public $num_columns;
+    public $columnCount;
 
-    public $grid_items;
+    public $items;
 
 
     public function setNumColumns(string $num_columns): self {
-        $this->num_columns = $num_columns;
+        $this->columnCount = $num_columns;
 
         return $this;
     }
 
     public function addGridItem(GridItem $gridItem): self {
 
-        $this->grid_items[] = $gridItem;
+        $this->items[] = $gridItem;
 
         return $this;
     }

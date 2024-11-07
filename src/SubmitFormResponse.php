@@ -30,6 +30,13 @@ class SubmitFormResponse extends GoogleModel
         return $this;
     }
 
+    public function setUniversalAction(RenderAction $render_actions): self
+    {
+        $this->render_actions = $render_actions;
+
+        return $this;
+    }
+
     /**
      * @return bool
      */
