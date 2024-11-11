@@ -2,19 +2,19 @@
 
 namespace ManishPareek\Gsuite\Addon;
 
-class Action extends GoogleModel
-{
+class Action extends GoogleModel {
     /** @var string */
     public $function;
 
     /** @var Parameter[] */
     public $parameters;
 
+    public $requiredWidgets;
+
     /**
      * @return string
      */
-    public function getFunction(): string
-    {
+    public function getFunction(): string {
         return $this->function;
     }
 
@@ -23,8 +23,7 @@ class Action extends GoogleModel
      *
      * @return Action
      */
-    public function setFunction(string $function): self
-    {
+    public function setFunction(string $function): self {
         $this->function = $function;
 
         return $this;
@@ -33,8 +32,7 @@ class Action extends GoogleModel
     /**
      * @return Parameter[]
      */
-    public function getParameters(): array
-    {
+    public function getParameters(): array {
         return $this->parameters;
     }
 
@@ -43,8 +41,7 @@ class Action extends GoogleModel
      *
      * @return Action
      */
-    public function setParameters(array $parameters): self
-    {
+    public function setParameters(array $parameters): self {
         $this->parameters = $parameters;
 
         return $this;
@@ -55,9 +52,14 @@ class Action extends GoogleModel
      *
      * @return Action
      */
-    public function addParameter(Parameter $parameter): self
-    {
+    public function addParameter(Parameter $parameter): self {
         $this->parameters[] = $parameter;
+
+        return $this;
+    }
+
+    public function addRequiredWidgets(string $string): self {
+        $this->requiredWidgets[] = $string;
 
         return $this;
     }
